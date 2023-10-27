@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Element</title>
+</head>
+<body>
+<input type="text" id="arrayElement">
+<button onclick="add()">Add</button>
+<button onclick="display()">Display</button>
+<script>
+    let arrayElement = [];
+function add() {
+    let data=document.getElementById("arrayElement").value;
+    arrayElement.push(data);
+}
+function display() {
+    for (let i = 0; i < arrayElement.length; i++) {
+        document.write("Element" + i +"= "+ arrayElement[i]+"<br>");
+    }
+}
+</script>
+</body>
+</html>
