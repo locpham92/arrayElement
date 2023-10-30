@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro Game Simple</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame"></p>
+<button type="button" onclick="change()">Change value</button>
+<script>
+    let gameBoard=[
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0]
+    ];
+    function arrDisplay() {
+        let data="";
+        for (let i = 0; i < gameBoard.length; i++) {
+            for (let j = 0; j < gameBoard[i].length; j++) {
+                data+=gameBoard[i][j] + '&nbsp;&nbsp';
+            }
+            data+='<br/>';
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+    arrDisplay();
+    function change() {
+        let row = prompt("Enter the row you want to change");
+        let col = prompt("Enter the column you want to change");
+        gameBoard[row-1][col-1] = "x";
+        arrDisplay();
+    }
+</script>
+</body>
+</html>
