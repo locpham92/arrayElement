@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h3>Tìm giá trị lớn nhất trong mảng</h3>
+<script>
+    let arrNum = [];
+    let n=prompt("Enter the length of array")
+    for (i=0; i<n; i++) {
+        arrNum[i]=Math.floor(Math.random()*100);
+    }
+    document.write("The array:"+arrNum+"<br>");
+    let arrMax=arrNum[0];
+    let index;
+    for (let i = 1; i < n; i++) {
+        if (arrNum[i] > arrMax) {
+            arrMax=arrNum[i];
+            index=i;
+        }
+    }
+   document.write("Maximum element of the array: "+ arrMax+" index: "+ index);
+</script>
+</body>
+</html>
